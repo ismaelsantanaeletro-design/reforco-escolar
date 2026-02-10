@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
-
   <title>Reforço Escolar</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,7 +12,7 @@
   <meta name="theme-color" content="#1976d2">
 
   <!-- Ícone -->
-  <link rel="icon" href="icons/icon-192.png">
+  <link rel="icon" href="icons/android-icon-192x192.png">
 
   <style>
     body {
@@ -32,15 +32,18 @@
       padding: 30px 15px;
     }
 
-    <button onclick="irParaSeries()"
-  style="padding:12px 20px;
-  background:#1E88E5;
-  color:white;
-  border:none;
-  border-radius:8px;
-  font-size:16px;">
-  Iniciar
-</button> {
+    button {
+      padding: 12px 20px;
+      background: #1E88E5;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      margin: 8px;
+      cursor: pointer;
+    }
+
+    button:hover {
       background: #0f5ca8;
     }
 
@@ -65,9 +68,9 @@
 
     <p>Escolha sua série e comece a aprender.</p>
 
-    <button onclick="escolherSerie()">Escolher Série</button>
+    <button onclick="irParaSeries()">Escolher Série</button>
 
-    <button onclick="iniciar()">Iniciar</button>
+    <button onclick="irParaSeries()">Iniciar</button>
 
   </main>
 
@@ -75,32 +78,21 @@
     <p>© 2026 - Reforço Escolar</p>
   </footer>
 
-
-  <!-- Script -->
   <script>
 
-    // Registrar Service Worker
+    // Service Worker
     if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('service-worker.js')
-        .then(() => console.log('Service Worker registrado'))
-        .catch(err => console.log('Erro:', err));
+      navigator.serviceWorker.register('sw.js')
+        .then(() => console.log('Service Worker OK'))
+        .catch(err => console.log('Erro SW:', err));
     }
 
-
-    function escolherSerie() {
-      alert("Em breve: Selecionar Série");
-    }
-
-    function iniciar() {
-      alert("Em breve: Início das atividades");
+    // Ir para tela de séries
+    function irParaSeries() {
+      window.location.href = "series.html";
     }
 
   </script>
 
 </body>
 </html>
-<script>
-  function irParaSeries() {
-    window.location.href = "series.html";
-  }
-</script>
