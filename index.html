@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Reforço Escolar</title>
+
+  <link rel="manifest" href="manifest.json">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="style.css">
+
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("service-worker.js");
+    }
+  </script>
+</head>
+
+<body>
+
+  <header>
+    <h1>📘 Reforço Escolar</h1>
+    <p>Crescendo em Conhecimento</p>
+  </header>
+
+  <main>
+
+    <button onclick="alert('Em breve: Selecionar Série')">
+      Escolher Série
+    </button>
+
+    <button onclick="alert('Em breve: Iniciar Estudos')">
+      Iniciar
+    </button>
+
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
