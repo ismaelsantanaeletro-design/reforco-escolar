@@ -1,25 +1,20 @@
 {
   "name": "Reforço Escolar",
-  "short_name": "Reforço",
-  "start_url": ".",
+  "short_name": "Reforço Escolar",
+  "start_url": "/reforco-escolar/",
   "display": "standalone",
-  "background_color": "#1E88E5",
+  "background_color": "#ffffff",
   "theme_color": "#1E88E5",
-  "description": "Reforço Escolar - Crescendo em Conhecimento",
   "icons": [
-  {
-    "src": "icons/android-icon-192x192.png",
-    "sizes": "192x192",
-    "type": "image/png"
-  },
-  {
-    "src": "icons/apple-icon-180x180.png",
-    "sizes": "180x180",
-    "type": "image/png"
-  },
-  {
-    "src": "icons/android-icon-144x144.png",
-    "sizes": "144x144",
-    "type": "image/png"
-  }
-]
+    {
+      "src": "icons/android-icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/android-icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
