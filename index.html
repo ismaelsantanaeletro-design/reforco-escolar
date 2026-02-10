@@ -2,19 +2,57 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
+
   <title>Reforço Escolar</title>
 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- PWA -->
   <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#1976d2">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Ícone -->
+  <link rel="icon" href="icons/icon-192.png">
 
-  <link rel="stylesheet" href="style.css">
-
-  <script>
-    if ("serviceWorker" in navigator) {
-      navigator.serviceWorker.register("service-worker.js");
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f7fa;
+      text-align: center;
     }
-  </script>
+
+    header {
+      background: #1976d2;
+      color: white;
+      padding: 20px;
+    }
+
+    main {
+      padding: 30px 15px;
+    }
+
+    button {
+      padding: 15px 25px;
+      margin: 10px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      background: #1976d2;
+      color: white;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #0f5ca8;
+    }
+
+    footer {
+      margin-top: 40px;
+      color: #666;
+      font-size: 14px;
+    }
+  </style>
 </head>
 
 <body>
@@ -26,16 +64,41 @@
 
   <main>
 
-    <button onclick="alert('Em breve: Selecionar Série')">
-      Escolher Série
-    </button>
+    <h2>Bem-vindo!</h2>
 
-    <button onclick="alert('Em breve: Iniciar Estudos')">
-      Iniciar
-    </button>
+    <p>Escolha sua série e comece a aprender.</p>
+
+    <button onclick="escolherSerie()">Escolher Série</button>
+
+    <button onclick="iniciar()">Iniciar</button>
 
   </main>
 
-  <script src="app.js"></script>
+  <footer>
+    <p>© 2026 - Reforço Escolar</p>
+  </footer>
+
+
+  <!-- Script -->
+  <script>
+
+    // Registrar Service Worker
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js')
+        .then(() => console.log('Service Worker registrado'))
+        .catch(err => console.log('Erro:', err));
+    }
+
+
+    function escolherSerie() {
+      alert("Em breve: Selecionar Série");
+    }
+
+    function iniciar() {
+      alert("Em breve: Início das atividades");
+    }
+
+  </script>
+
 </body>
 </html>
