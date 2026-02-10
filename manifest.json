@@ -1,7 +1,7 @@
 {
   "name": "Reforço Escolar",
   "short_name": "Reforço Escolar",
-  "start_url": "/reforco-escolar/",
+  "start_url": "/reforco-escolar/?v=2"
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#1E88E5",
