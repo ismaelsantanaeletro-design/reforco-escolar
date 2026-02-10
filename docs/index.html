@@ -11,6 +11,9 @@
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#1976d2">
 
+  <!-- Ícone -->
+  <link rel="icon" href="icons/icon-192.png">
+
   <style>
     body {
       margin: 0;
@@ -36,7 +39,7 @@
       border: none;
       border-radius: 8px;
       font-size: 16px;
-      margin: 8px;
+      margin: 10px;
       cursor: pointer;
     }
 
@@ -65,9 +68,9 @@
 
     <p>Escolha sua série e comece a aprender.</p>
 
-    <button onclick="irParaSeries()">Escolher Série</button>
+    <button onclick="escolherSerie()">Escolher Série</button>
 
-    <button onclick="irParaSeries()">Iniciar</button>
+    <button onclick="iniciar()">Iniciar</button>
 
   </main>
 
@@ -75,10 +78,24 @@
     <p>© 2026 - Reforço Escolar</p>
   </footer>
 
+  <!-- Script -->
   <script>
-    function irParaSeries() {
+
+    // Registrar Service Worker
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('sw.js')
+        .then(() => console.log('Service Worker registrado'))
+        .catch(err => console.log('Erro:', err));
+    }
+
+    function escolherSerie() {
       window.location.href = "series.html";
     }
+
+    function iniciar() {
+      window.location.href = "series.html";
+    }
+
   </script>
 
 </body>
