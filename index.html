@@ -32,18 +32,15 @@
       padding: 30px 15px;
     }
 
-    button {
-      padding: 15px 25px;
-      margin: 10px;
-      font-size: 16px;
-      border: none;
-      border-radius: 8px;
-      background: #1976d2;
-      color: white;
-      cursor: pointer;
-    }
-
-    button:hover {
+    <button onclick="irParaSeries()"
+  style="padding:12px 20px;
+  background:#1E88E5;
+  color:white;
+  border:none;
+  border-radius:8px;
+  font-size:16px;">
+  Iniciar
+</button> {
       background: #0f5ca8;
     }
 
@@ -102,3 +99,8 @@
 
 </body>
 </html>
+<script>
+  function irParaSeries() {
+    window.location.href = "series.html";
+  }
+</script>
